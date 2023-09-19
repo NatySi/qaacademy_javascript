@@ -1,0 +1,13 @@
+describe( "Exercicios",() =>{
+    beforeEach(()=>{
+        cy.visit("https://www.google.com");
+    })
+    
+    it('Exercicio 1',()=>{
+        cy.get('[class="gLFyf"]').click();
+        cy.get('[class="gLFyf"]').type("Casa na natureza").type("{ENTER}");
+        cy.get('[class="uhHOwf BYbUcd"]').eq(0).click();
+        cy.contains('Airbnb Newsroom').should('be.visible');
+    })
+    
+})
